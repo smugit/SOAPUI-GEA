@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0c1f6a29-f6e9-4a3b-8654-c58fb2b5a57b" activeEnvironment="Default" name="CattlePortal" resourceRoot="" soapui-version="5.2.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="44990925-168e-4f5b-ae76-8815557e5aa3" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://buildgea1.365farmnet.com:444" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint></con:endpoints><con:resource name="createAnimal" path="/365FarmNet/mod/dairynet.herdmanagement/rest/v1.0/animalaction/create" id="e5d1cf1e-703f-4496-bc9f-2e08a91decec"><con:settings/><con:parameters/><con:method name="Method 1" id="ff25e2cb-ab62-4906-9721-15aec5ed9a7d" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>400 403 401</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="69b92747-629c-4946-b383-5aea8b70609d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Cookie" value="JWT-SESSIONID=AQ+SQKrywLyirOcJ9QLYKulP"/>
+  &lt;con:entry key="X-XSRF-TOKEN" value="194752fc-ceb5-4947-951b-7512a9cd28bb"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request>{
+"id":null,
+"companyId":"b6013e2a-77df-45f8-83a7-c0ecf22a580a",
+"version":null,
+"cattle":null,
+"actionDate":[2018,2,13],
+"createdAt":null,
+"createdBy":null,
+"state":"BOOKED",
+"comment":null,
+"actionType":"ENTER_HERD",
+"persons":[],
+"deleted":false,
+"undoable":true,
+"cattleType":"DairyCow",
+"cattleBreedDTO":{"id":"a540b286-66a0-446d-9677-0c9fe5f5bb32",
+"companyId":"b6013e2a-77df-45f8-83a7-c0ecf22a580a",
+"name":"Limousin",
+"number":4},
+"sex":"female",
+"officialEarTag":"1.236.552",
+"animalNumber":1236552,
+"reason":"PURCHASE",
+"usage":"noentry",
+"origin":null,
+"farmSiteAndFarm":{"id":"f031d9e9-20b0-49aa-95da-ea728ca8e6aa",
+"displayText":"MMHR / Mu",
+"farmId":"84e88fff-5935-4400-b790-b958456cc15e",
+"farmSiteId":"3159bfdb-1398-41ff-a8d6-b04000ab290a"},
+"cowStatus":"OTHER",
+"lactationNumber":null,
+"dateOfLastInsemination":null,
+"dateOfLastCalving":null,
+"dateOfLastSetDry":null,
+"milkTotalBeforeMeasurement":null,
+"geneticDamExtern":null,
+"geneticSireExtern":null,
+"birthDate":null,
+"birthType":"noentry",
+"birthWeight":null,
+"calvingEase":"noentry",
+"relativeBreedingValueG":null,
+"relativeBreedingValueMilk":null,
+"relativeBreedingValueReproduction":null,
+"relativeBreedingValueExterieur":null,
+"relativeBreedingValueLifetime":null,
+"relativeBreedingValueMilkability":null,
+"valueTemperament":null,
+"milkInKg":null,
+"fatInKg":null,
+"fatPercent":null,
+"proteinInKg":null,
+"proteinPercent":null,
+"animalName":null,
+"isReEntry":false,
+"reEntryCattleId":null
+}</con:request><con:originalUri>https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle</con:originalUri><con:credentials><con:username>dairy1-1</con:username><con:password>365FarmNet</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="milkVisit" path="/365FarmNet/mod/dairynet.milking/rest/v1.0/milkvisit/bulk/${#Project#farmId}/${#Project#farmSiteId}" id="e5d1cf1e-703f-4496-bc9f-2e08a91decec"><con:settings/><con:parameters/><con:method name="Method 1" id="ff25e2cb-ab62-4906-9721-15aec5ed9a7d" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>400 403 401</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:cat="https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle">cat:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="milkVisit" id="69b92747-629c-4946-b383-5aea8b70609d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Cookie" value="ROUTEID1=.11; _ga=GA1.2.1775744916.1517471240; ROUTEID=.11; X-FARMNET-JSESSIONID=AQ+SQKrywLyirOcJ9QLYKulP.undefined; XSRF-TOKEN=194752fc-ceb5-4947-951b-7512a9cd28bb"/>
+  &lt;con:entry key="X-XSRF-TOKEN" value="194752fc-ceb5-4947-951b-7512a9cd28bb"/>
+  &lt;con:entry key="Content-Type" value="application/json"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request>  {
+    "identity": {
+      "identifier": "${EARTAG}",
+      "label": "EVN"
+    },
+    "milkingStartingTime": {
+      "value": "${DATE}",
+      "format": ""
+    },
+    "milkingMilkWeight": {
+      "value": 20.0,
+      "unitCode": "KGM"
+    },
+    "processControl": [
+    ],
+    "processResult": [
+      {
+        "description": "none",
+        "value": "true",
+        "valueType": "${PROCESS_RESULT_TYPE}",
+        "quarterwise": "NONE",
+        "dairynet": "dairy-1"
+      }
+  ]
+  }</con:request><con:originalUri>https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle</con:originalUri><con:credentials><con:username>365fn</con:username><con:password>365FarmNet!2016</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>false</con:preemptive><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="authenticate" path="/365FarmNet/rest/user/authenticate" id="e5d1cf1e-703f-4496-bc9f-2e08a91decec"><con:settings/><con:parameters><con:parameter><con:name>username</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="ff25e2cb-ab62-4906-9721-15aec5ed9a7d" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>401</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>400 401</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>250 200</con:status><con:params/><con:element xmlns:cat="https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle">cat:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:request name="auth" id="69b92747-629c-4946-b383-5aea8b70609d" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-Type" value="application/x-www-form-urlencoded" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request/><con:originalUri>https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle</con:originalUri><con:credentials><con:username>365fn</con:username><con:password>365FarmNet!2016</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="password" value="365FarmNet"/>
+  <con:entry key="username" value="dairy1-1"/>
+</con:parameters><con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="paginated" path="/365FarmNet/mod/dairynet.herdmanagement/cattle/paginated" id="18384dc6-6f90-4ac4-8b80-8756bea38c79"><con:settings/><con:parameters/><con:method name="Method 1" id="a1f4abc1-f420-4486-ad0c-942809e6e7f5" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>401 403</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="paginated" id="2689afec-ded8-4910-82df-1a2b3c72ce58" mediaType="application/x-www-form-urlencoded" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Cookie" value="X-FARMNET-JSESSIONID=AQ+SQKrywLyirOcJ9QLYKulP.undefined"/>
+  <con:entry key="Authorization" value="Basic MzY1Zm46MzY1RmFybU5ldCEyMDE2"/>
+  <con:entry key="X-XSRF-TOKEN" value="194752fc-ceb5-4947-951b-7512a9cd28bb"/>
+  <con:entry key="Content-Type" value="application/json;charset=UTF-8"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request>{"perPage":50,"first":0,"filters":{"inactive":"false"},"sorted":[{"col":"animalnumber","type":"dninteger","reversed":false}]}</con:request><con:originalUri>https://buildgea1.365farmnet.com/365FarmNet/mod/dairynet.herdmanagement/cattle/paginated</con:originalUri><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="6a48e813-f45d-4e8c-8f4c-f967e25c279d" name="milkVisitSim"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="e07b202e-1e7e-4e85-83a7-3871f7a20765" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="auth" id="7bace7d6-a7ba-49aa-99d3-71b7a26b80bf"><con:settings/><con:config service="https://buildgea1.365farmnet.com:444" resourcePath="/365FarmNet/rest/user/authenticate" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="auth" id="69b92747-629c-4946-b383-5aea8b70609d" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-Type" value="application/x-www-form-urlencoded" xmlns="http://eviware.com/soapui/config"/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request/><con:originalUri>https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle</con:originalUri><con:assertion type="Simple Contains" id="8b0a2df3-04d7-4045-8fcb-930c29b142cf" name="Contains-userId"><con:configuration><token>userId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>365fn</con:username><con:password>365FarmNet!2016</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>false</con:preemptive><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="password" value="${#TestSuite#password}"/>
+  <con:entry key="username" value="${#TestSuite#user}"/>
+</con:parameters><con:parameterOrder><con:entry>username</con:entry><con:entry/></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="storeCookie" id="8cabb10f-216e-4ea1-9d38-4014de931015"><con:settings/><con:config><script>/*def jsession1 = testRunner.testCase.getTestStepByName("auth").httpRequest.response.responseHeaders["Set-Cookie"]
+jsession1=jsession1.toString()
+log.info jsession1
+String jsession1 = jsession1.substring(jsession1.indexOf(""), jsession1.indexOf(";")).reverse().take(34).reverse();
+log.info ("Token:" +jsession1)
+*/
+//def basicAuth = testRunner.testCase.getTestStepByName("auth").getPropertyValue("rawRequest")
+//def basicAuth = testRunner.testCase.getTestStepByName("auth").httpRequest.rawRequest
+//log.info ("Request: " +basicAuth)
+
+//def basicAuth = testRunner.testStep.getPropertyValue("rawRequest");
+
+
+
+
+// Get cookie information from response for auth
+def cookie = testRunner.testCase.getTestStepByName("auth").httpRequest.response.responseHeaders["Set-Cookie"]
+log.info cookie
+//jsession1=cookie.toString().split(/=/)[1].take(34)
+//log.info jsession1
+
+jsession2=cookie.toString().split(/=/)[3].take(34)
+//log.info jsession2
+testRunner.testCase.testSuite.setPropertyValue( "Cookie", jsession2 )
+
+xsrfToken=cookie.toString().split(/=/)[5].take(36)
+//log.info xsrfToken
+testRunner.testCase.testSuite.setPropertyValue( "X-XSRF-TOKEN", xsrfToken )
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="paginated" id="f16c7692-6eab-4072-b394-90b8503e91cf"><con:settings/><con:config service="https://buildgea1.365farmnet.com:444" resourcePath="/365FarmNet/mod/dairynet.herdmanagement/cattle/paginated" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="paginated" id="2689afec-ded8-4910-82df-1a2b3c72ce58" mediaType="application/x-www-form-urlencoded" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Cookie" value="X-FARMNET-JSESSIONID=${#TestSuite#Cookie}"/>
+  <con:entry key="Authorization" value="Basic MzY1Zm46MzY1RmFybU5ldCEyMDE2"/>
+  <con:entry key="X-XSRF-TOKEN" value="${#TestSuite#X-XSRF-TOKEN}"/>
+  <con:entry key="Content-Type" value="application/json;charset=UTF-8"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request>{
+"perPage":30,"first":0,
+"filters":{"inactive":"false",
+			"cattleType":"DairyCow"
+		},
+"sorted":[{"col":"animalnumber","type":"dninteger","reversed":false}]}</con:request><con:originalUri>https://buildgea1.365farmnet.com/365FarmNet/mod/dairynet.herdmanagement/cattle/paginated</con:originalUri><con:assertion type="Simple Contains" id="5fe7017a-305b-4d75-bdce-c1106d28fa77" name="Contains=cattleBreedId"><con:configuration><token>cattleBreedId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="83f96f60-f748-44ff-b173-4ed70068a408"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>json</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>paginated</con:sourceStep><con:sourcePath/><con:targetType>json</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:type>XPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="fadbc52d-fae2-4be6-8211-2f2996e692f4"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+def ResponseMessage = testRunner.testCase.testSuite.getPropertyValue( "json" ) 
+def holder = groovyUtils.getXmlHolder( ResponseMessage )
+
+testRunner.testCase.testSuite.setPropertyValue( "weight", "15.00" )
+
+
+for( earTag in holder.getNodeValues( "//officialEarTag" ))
+{
+
+	date = new Date().plus(-1).format( 'yyyy-MM-dd')
+	time = new Date().format( 'HH:mm:ss')
+    	testRunner.testCase.testSuite.setPropertyValue( "officialEarTag", earTag )
+	def testStep = testRunner.testCase.getTestStepByName("milkVisits")
+	testStep.run(testRunner, context).sleep(3000)
+	def datetime = date +"T" + time + "+01:00"
+	testRunner.testCase.testSuite.setPropertyValue( "timeFlag", datetime )
+	log.info ("OfficialEarTag: " +earTag + " Timestamp: " +datetime)
+
+}
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="milkVisits" id="eacc8821-7669-4f20-8047-a09aff64f5de"><con:settings/><con:config service="https://buildgea1.365farmnet.com:444" resourcePath="/365FarmNet/mod/dairynet.milking/rest/v1.0/milkvisit/bulk/${#Project#farmId}/${#Project#farmSiteId}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="milkVisits" id="69b92747-629c-4946-b383-5aea8b70609d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Cookie" value="X-FARMNET-JSESSIONID=${#TestSuite#Cookie}"/>
+  <con:entry key="Authorization" value="Basic MzY1Zm46MzY1RmFybU5ldCEyMDE2"/>
+  <con:entry key="X-XSRF-TOKEN" value="${#TestSuite#X-XSRF-TOKEN}"/>
+  <con:entry key="Content-Type" value="application/json;charset=UTF-8"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request>[
+  {
+    "identity": {
+      "identifier": "${#TestSuite#officialEarTag}",
+      "label": "EVN"
+    },
+    "location": "Boenen",
+    "milkingStartingTime": {
+      "value": "${#TestSuite#timeFlag}",
+      "format": ""
+    },
+    "milkingDuration": {
+      "value": 480.0,
+      "unitCode": "SEC"
+    },
+      "milkingVisitDuration": {
+      "value": 240.0,
+      "unitCode": "SEC"
+    },
+    "milkingMilkWeight": {
+      "value": 17.98,
+      "unitCode": "KGM"
+    },
+      "milkingSuccess": {
+      "value": true
+    },
+      "milkingParlorUnit": {
+      "value": "4",
+      "languageId": "en",
+      "languageLocaleId": "en"
+    },
+      "milkingBoxNumber": {
+      "value": "3",
+      "languageId": "en",
+      "languageLocaleId": "en"
+    },
+    "processControl": [
+    ],
+    "processResult": [
+      {
+        "description": "Test ob es in der DB steht",
+        "value": "true",
+        "valueType": "milked",
+        "quarterwise": "NONE",
+        "dairynet": "dairy-1"
+      }
+    ]
+  }
+]
+</con:request><con:originalUri>https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle</con:originalUri><con:assertion type="Simple Contains" id="3005de4b-7ceb-4f70-84fa-3e1feb0d8348" name="Contains"><con:configuration><token>companyId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>dairy1-1</con:username><con:password>365FarmNet</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Copy of milkVisit_ToTest" id="7511703e-e9a6-43be-b15d-d34b4f247d27" disabled="true"><con:settings/><con:config service="https://buildgea1.365farmnet.com:444" resourcePath="/365FarmNet/mod/dairynet.milking/rest/v1.0/milkvisit/bulk/${#Project#farmId}/${#Project#farmSiteId}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Copy of milkVisit_ToTest" id="69b92747-629c-4946-b383-5aea8b70609d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Cookie" value="X-FARMNET-JSESSIONID=${#TestSuite#Cookie}"/>
+  <con:entry key="Authorization" value="Basic MzY1Zm46MzY1RmFybU5ldCEyMDE2"/>
+  <con:entry key="X-XSRF-TOKEN" value="${#TestSuite#X-XSRF-TOKEN}"/>
+  <con:entry key="Content-Type" value="application/json;charset=UTF-8"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request>[
+  {
+    "identity": {
+      "identifier": "DE0000000007123",
+      "label": "EVN"
+    },
+    "location": "Boenen",
+    "milkingStartingTime": {
+      "value": "2018-03-11T10:00:38+01:00",
+      "format": ""
+    },
+    "milkingDuration": {
+      "value": 480.0,
+      "unitCode": "SEC"
+    },
+    "milkingVisitDuration": {
+      "value": 840.0,
+      "unitCode": "SEC"
+    },
+    "milkingTypeCode": 2,
+    "milkingMilkWeight": {
+      "value": 20.0,
+      "unitCode": "KGM"
+    },
+    "milkingSuccess": {
+      "value": false
+    },
+    "milkingParlorUnit": {
+      "value": "1",
+      "languageId": "en",
+      "languageLocaleId": "en"
+    },
+    "milkingBoxNumber": {
+      "value": "3",
+      "languageId": "en",
+      "languageLocaleId": "en"
+    },
+    "milkingDeviceId": "45302334222",
+    "measureDeviceId": "31111-456-?678Test",
+    "icarQuarterMilkingResults": [
+      {
+        "quarterId": "LF",
+        "quarterMilkingDuration": {
+          "value": 300.0,
+          "unitCode": "SEC"
+        },
+        "quarterMilkingWeight": {
+          "value": 7.0,
+          "unitCode": "KGM"
+        },
+        "milkCharacteristics": [
+          {
+            "milkCharacteristicCode": "AVGCOND",
+            "milkCharacteristicValue": {
+              "value": 400.0,
+              "unitCode": "D10"
+            }
+          },
+          {
+            "milkCharacteristicCode": "AVGFLWR",
+            "milkCharacteristicValue": {
+              "value": 15.720000267028809,
+              "unitCode": "F31"
+            }
+          }
+        ]
+      },
+      {
+        "quarterId": "LR",
+        "quarterMilkingDuration": null,
+        "quarterMilkingWeight": {
+          "value": 6.0,
+          "unitCode": "KGM"
+        },
+        "milkCharacteristics": []
+      },
+      {
+        "quarterId": "RF",
+        "quarterMilkingDuration": null,
+        "quarterMilkingWeight": {
+          "value": 8.0,
+          "unitCode": "KGM"
+        },
+        "milkCharacteristics": []
+      },
+      {
+        "quarterId": "RR",
+        "quarterMilkingDuration": null,
+        "quarterMilkingWeight": {
+          "value": 5.0,
+          "unitCode": "KGM"
+        },
+        "milkCharacteristics": []
+      }
+    ],
+    "characteristics": [
+      {
+        "milkCharacteristicCode": "AVGCOND",
+        "milkCharacteristicValue": {
+          "value": 333.0,
+          "unitCode": "D10"
+        }
+      },
+      {
+        "milkCharacteristicCode": "AVGFLWR",
+        "milkCharacteristicValue": {
+          "value": 5.929999828338623,
+          "unitCode": "F31"
+        }
+      }
+    ],
+    "milkControlSettingsId": "e41a59f5-a6a8-4fbb-a974-e6003190738d",
+    "processResult": [
+      {
+        "id": "IncompleteMilking",
+        "value": "false",
+        "name": "Incomplete Milking",
+        "dataType": "BOOL",
+        "quarterwise": "GENERAL",
+        "unit": "Fantasy"
+      },
+      {
+        "id": "pc_SpecificValue_1",
+        "value": "300",
+        "name": "Specific Value 1",
+        "dataType": "INTEGER",
+        "quarterwise": "FR",
+        "unit": "SEC"
+      },
+      {
+        "id": "pc_SpecificValue_1",
+        "value": "310",
+        "name": "Specific Value 1",
+        "dataType": "INTEGER",
+        "quarterwise": "FL",
+        "unit": "SEC"
+      },
+      {
+        "id": "pc_SpecificValue_1",
+        "value": "280",
+        "name": "Specific Value 1",
+        "dataType": "INTEGER",
+        "quarterwise": "RR",
+        "unit": "SEC"
+      },
+      {
+        "id": "pc_SpecificValue_1",
+        "value": "300",
+        "name": "Specific Value 1",
+        "dataType": "INTEGER",
+        "quarterwise": "RL",
+        "unit": "SEC"
+      }
+    ]
+  }
+]</con:request><con:originalUri>https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle</con:originalUri><con:assertion type="Simple Contains" id="3005de4b-7ceb-4f70-84fa-3e1feb0d8348" name="Contains"><con:configuration><token>companyId</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>dairy1-1</con:username><con:password>365FarmNet</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="milkVisit" id="50b39bc1-1469-4d3c-9f9c-72a2c9cac40b" disabled="true"><con:settings/><con:config service="https://buildgea1.365farmnet.com:444" resourcePath="/365FarmNet/mod/dairynet.milking/rest/v1.0/milkvisit/bulk/${#Project#farmId}/${#Project#farmSiteId}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="milkVisit" id="69b92747-629c-4946-b383-5aea8b70609d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Cookie" value="X-FARMNET-JSESSIONID=${#TestSuite#Cookie}"/>
+  <con:entry key="Authorization" value="Basic MzY1Zm46MzY1RmFybU5ldCEyMDE2"/>
+  <con:entry key="X-XSRF-TOKEN" value="${#TestSuite#X-XSRF-TOKEN}"/>
+  <con:entry key="Content-Type" value="application/json;charset=UTF-8"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>${#Project#protokoll}${#Project#endpoint}${#Project#port}</con:endpoint><con:request>[
+  {
+    "identity": {
+      "identifier": "${EARTAG}",
+      "label": "EVN"
+    },
+    "milkingStartingTime": {
+      "value": "${DATE}",
+      "format": ""
+    },
+    "milkingMilkWeight": {
+      "value": 20.0,
+      "unitCode": "KGM"
+    },
+    "processControl": [
+    ],
+    "processResult": [
+      {
+        "description": "none",
+        "value": "true",
+        "valueType": "${PROCESS_RESULT_TYPE}",
+        "quarterwise": "NONE",
+        "dairynet": "dairy-1"
+      }
+    ]
+  }
+]</con:request><con:originalUri>https://buildgea1.365farmnet.com/dairynet.mobile/v1.0/cattle</con:originalUri><con:credentials><con:username>dairy1-1</con:username><con:password>365FarmNet</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="jdbc" name="JDBC Request" id="79314d69-c549-4731-b51a-765e530dfda6" disabled="true"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query>${#TestSuite#Cookie}
+${#TestSuite#X-XSRF-TOKEN}</con:query><con:properties/></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script2" id="a20a47ec-1902-4ddc-8847-37b4c37535ba" disabled="true"><con:settings/><con:config><script>//define the location of the JSON file
+//def response = testRunner.testCase.testSteps["auth"].testRequest.response.contentAsString
+
+
+//define "json" which will be the name of my variable
+//def json = new JsonSlurper().parseText (response)
+
+ 
+
+//grab that json file result I want
+date = new Date().plus(-1).format( 'yyyy-MM-dd')
+time = new Date().format( 'HH:mm:ss')
+
+def datetime = date +"T" + time + "+01:00"
+testRunner.testCase.testSuite.setPropertyValue( "timeFlag", datetime )
+log.info datetime 
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>myCookieStore</con:name><con:value>myCookieStore</con:value></con:property><con:property><con:name>user</con:name><con:value>dairy1-1</con:value></con:property><con:property><con:name>password</con:name><con:value>365FarmNet</con:value></con:property><con:property><con:name>CorrelationId</con:name><con:value>[WovxQ1Rhfdy4mc72b7HOPAAAA9U]</con:value></con:property><con:property><con:name>Authorization</con:name><con:value/></con:property><con:property><con:name>Cookie</con:name><con:value>pvKfk17bL+19OtBFwYtJ7p-0.undefined</con:value></con:property><con:property><con:name>X-XSRF-TOKEN</con:name><con:value>8a366aac-89a8-4d94-89b2-e7b2b68aadd3</con:value></con:property><con:property><con:name>officialEarTag</con:name><con:value>DE39938142</con:value></con:property><con:property><con:name>json</con:name><con:value><![CDATA[<Response>
+   <e>
+      <animalName>Karla</animalName>
+      <animalnumber>0</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>27</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>07dd9aeb-7c81-4946-96fc-b40850d0c0ed</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>8</lactationNumber>
+      <officialEarTag>DE16738022</officialEarTag>
+      <statusCow>OTHER</statusCow>
+      <studbookNumber>38919778</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Elli</animalName>
+      <animalnumber>1</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>db7c8300-bdcb-4834-94fa-678a51b63091</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>0</lactationNumber>
+      <officialEarTag>DE58477142</officialEarTag>
+      <studbookNumber>57493454</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Cindy</animalName>
+      <animalnumber>3</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>399</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>b95ef3c8-4950-46d6-a6f3-8e6a085d1085</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>7</lactationNumber>
+      <officialEarTag>DE22546532</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>37603022</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Annika</animalName>
+      <animalnumber>7</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>538</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>41d4c114-995e-4e9a-aa7d-0daab4a819b0</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>1</lactationNumber>
+      <officialEarTag>DE35144429</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>56548493</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Ratina</animalName>
+      <animalnumber>8</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>550</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>ec27fa06-19a5-49ef-afbc-2d06bfa8c3f3</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>1</lactationNumber>
+      <officialEarTag>DE67143148</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>72298967</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Ruth</animalName>
+      <animalnumber>9</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>545</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>c722d726-6b07-441d-b9b0-ee270c1e4adb</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>1</lactationNumber>
+      <officialEarTag>DE57390917</officialEarTag>
+      <statusCow>OPEN</statusCow>
+      <studbookNumber>62112298</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Ronda</animalName>
+      <animalnumber>10</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>592</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>b923b965-e861-4ace-a424-46b3f1f777ca</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>1</lactationNumber>
+      <officialEarTag>DE74247661</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>13707693</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Monte Rosa</animalName>
+      <animalnumber>11</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>392</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>cdbaf5a5-23c7-443d-9dee-29cc277f8f8e</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>2</lactationNumber>
+      <officialEarTag>DE67888113</officialEarTag>
+      <statusCow>LEAD</statusCow>
+      <studbookNumber>42977863</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Meike</animalName>
+      <animalnumber>13</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>35</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>56347b0e-a6c9-4601-aa83-473ae338bac0</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>4</lactationNumber>
+      <officialEarTag>DE45173758</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>48262393</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Caroline</animalName>
+      <animalnumber>14</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>384</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>16a30652-82b5-4a2b-becb-7f2c0012ee6d</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>5</lactationNumber>
+      <officialEarTag>DE22657419</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>47337536</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Riviera</animalName>
+      <animalnumber>16</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>1112</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>126543bd-c227-4b33-b02e-05e406d3ae3e</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>2</lactationNumber>
+      <officialEarTag>DE36232714</officialEarTag>
+      <statusCow>LEAD</statusCow>
+      <studbookNumber>56871785</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Penelope</animalName>
+      <animalnumber>18</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>836</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>6ff763d9-a7b9-4564-976e-61523da4b5ee</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>3</lactationNumber>
+      <officialEarTag>DE31609071</officialEarTag>
+      <statusCow>PREGNANT</statusCow>
+      <studbookNumber>52919573</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Erina</animalName>
+      <animalnumber>19</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>816</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>925d3dfd-6ed9-4535-9979-36e53041eb27</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>4</lactationNumber>
+      <officialEarTag>DE38608156</officialEarTag>
+      <statusCow>PREGNANT</statusCow>
+      <studbookNumber>44163948</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Nelly</animalName>
+      <animalnumber>20</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>807</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>d9bbffa4-3feb-458a-b088-b7413caf1578</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>3</lactationNumber>
+      <officialEarTag>DE30748435</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>60933091</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Rasputch</animalName>
+      <animalnumber>21</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>399</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>aafe9081-3d27-4554-9745-bfa7d9cd8d5b</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>4</lactationNumber>
+      <officialEarTag>DE79315218</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>43311557</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Fabiola</animalName>
+      <animalnumber>22</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>566</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>84f739b5-3ddd-4b69-b680-28e5d7751686</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>5</lactationNumber>
+      <officialEarTag>DE32437062</officialEarTag>
+      <statusCow>INSEMINATED</statusCow>
+      <studbookNumber>35439375</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Prise</animalName>
+      <animalnumber>25</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>458</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>6d62048f-039c-42dd-812f-9b85445a659d</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>5</lactationNumber>
+      <officialEarTag>DE56630178</officialEarTag>
+      <statusCow>INSEMINATED</statusCow>
+      <studbookNumber>72245031</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Cilena</animalName>
+      <animalnumber>28</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>415</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>c42c14cc-4830-4955-92d5-896d81aa79c5</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>5</lactationNumber>
+      <officialEarTag>DE35750474</officialEarTag>
+      <statusCow>INSEMINATED</statusCow>
+      <studbookNumber>11186979</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Cinderel</animalName>
+      <animalnumber>30</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>399</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>dba4e5be-8f04-40d8-88cb-427d851ce984</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>3</lactationNumber>
+      <officialEarTag>DE34472701</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>89189304</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Biene</animalName>
+      <animalnumber>31</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>271</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>16e1cba6-36ea-4968-bac5-4a3d20f3e997</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>2</lactationNumber>
+      <officialEarTag>DE93182269</officialEarTag>
+      <statusCow>LEAD</statusCow>
+      <studbookNumber>26108596</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Odine</animalName>
+      <animalnumber>32</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>816</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>2a2365d8-4b05-459a-bc6d-757089cac573</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>3</lactationNumber>
+      <officialEarTag>DE23441769</officialEarTag>
+      <statusCow>PREGNANT</statusCow>
+      <studbookNumber>58774058</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Revue</animalName>
+      <animalnumber>33</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>850</daysInMilk>
+      <farmFarmSite>MMHR/Mu</farmFarmSite>
+      <farmId>84e88fff-5935-4400-b790-b958456cc15e</farmId>
+      <farmSiteId>3159bfdb-1398-41ff-a8d6-b04000ab290a</farmSiteId>
+      <full_count>90</full_count>
+      <id>0f90f340-94f3-4744-bbb2-b60fc6288028</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>3</lactationNumber>
+      <officialEarTag>DE30689609</officialEarTag>
+      <statusCow>INSEMINATED</statusCow>
+      <studbookNumber>80803246</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Cosima</animalName>
+      <animalnumber>35</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>393</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>69cabb85-1b0d-47e8-acfb-d45571bd9bb6</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>6</lactationNumber>
+      <officialEarTag>DE26476679</officialEarTag>
+      <statusCow>READY</statusCow>
+      <studbookNumber>91956503</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Tanita</animalName>
+      <animalnumber>36</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>0d55e1b9-a46f-4d57-973f-928ebf981291</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>0</lactationNumber>
+      <officialEarTag>DE31577619</officialEarTag>
+      <studbookNumber>95455009</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Randy</animalName>
+      <animalnumber>37</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>752</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>561fba11-6a76-446f-a3a3-9e0bf0fc149b</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>5</lactationNumber>
+      <officialEarTag>DE11733631</officialEarTag>
+      <statusCow>PREGNANT</statusCow>
+      <studbookNumber>97413367</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Linda</animalName>
+      <animalnumber>38</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>805</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>50738b18-b946-4688-b533-d5f73a5a55df</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>4</lactationNumber>
+      <officialEarTag>DE82093089</officialEarTag>
+      <statusCow>INSEMINATED</statusCow>
+      <studbookNumber>83133821</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Berta</animalName>
+      <animalnumber>39</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>377</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>4887d4dc-7749-47cc-9c94-1f5d4fff54ed</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>5</lactationNumber>
+      <officialEarTag>DE55825844</officialEarTag>
+      <statusCow>FRESH</statusCow>
+      <studbookNumber>49787254</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Patricia</animalName>
+      <animalnumber>40</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>782</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>fbda8d45-c443-48ec-9584-4f0ef7361c09</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>2</lactationNumber>
+      <officialEarTag>DE15673095</officialEarTag>
+      <statusCow>PREGNANT</statusCow>
+      <studbookNumber>39823183</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Rieke</animalName>
+      <animalnumber>41</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>412</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>99e69a1e-0e65-48ff-aed2-afa76daccf9c</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>4</lactationNumber>
+      <officialEarTag>DE40295092</officialEarTag>
+      <statusCow>OPEN</statusCow>
+      <studbookNumber>48678397</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+   <e>
+      <animalName>Nadine</animalName>
+      <animalnumber>42</animalnumber>
+      <cattleBreedId>57d49fac-acf3-4691-9332-540ce3d6e8b7</cattleBreedId>
+      <cattleBreed_name>Holstein SBT</cattleBreed_name>
+      <cattleType>DairyCow</cattleType>
+      <company_id>b6013e2a-77df-45f8-83a7-c0ecf22a580a</company_id>
+      <daysInMilk>283</daysInMilk>
+      <farmFarmSite>MMH/TS</farmFarmSite>
+      <farmId>0238cec1-80ae-44fb-8362-583589750be3</farmId>
+      <farmSiteId>a3853e01-2b33-4781-989a-699ec5c9b383</farmSiteId>
+      <full_count>90</full_count>
+      <id>6037f1d3-8e7c-4f43-8ac1-d11bfc166850</id>
+      <inactive>false</inactive>
+      <invalid>false</invalid>
+      <lactationNumber>4</lactationNumber>
+      <officialEarTag>DE39938142</officialEarTag>
+      <statusCow>DRY</statusCow>
+      <studbookNumber>80507917</studbookNumber>
+      <syncState>NEVER_SYNCED</syncState>
+   </e>
+</Response>]]></con:value></con:property><con:property><con:name>timeFlag</con:name><con:value>2018-03-12T08:26:51+01:00</con:value></con:property><con:property><con:name>weight</con:name><con:value/></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>protokoll</con:name><con:value>https://</con:value></con:property><con:property><con:name>endpoint</con:name><con:value>buildgea1.365farmnet.com</con:value></con:property><con:property><con:name>port</con:name><con:value/></con:property><con:property><con:name>testEndpoint</con:name><con:value>test.365farmnet.com</con:value></con:property><con:property><con:name>buildEndpoint </con:name><con:value>buildgea1.365farmnet.com</con:value></con:property><con:property><con:name>preprodEndpoint</con:name><con:value>preprod.365farmnet.com/</con:value></con:property><con:property><con:name>port1->4App</con:name><con:value>:444</con:value></con:property><con:property><con:name>Cookie</con:name></con:property><con:property><con:name>farmId</con:name><con:value>0238cec1-80ae-44fb-8362-583589750be3</con:value></con:property><con:property><con:name>farmSiteId</con:name><con:value>a3853e01-2b33-4781-989a-699ec5c9b383</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
